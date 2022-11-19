@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Cost - Cost Calculator</title>
+    <link rel="stylesheet" href="css/mc.css">
+</head>
+<body>
+    <header>
+        <span>Costing Calculator</span>
+    </header>
+    <section class="heading">
+        <h2>
+            Material Cost
+        </h2>
+        <p class="sub-title">
+            Here you are required to enter all the prices of ingredients and thier weights/units of measurement <br>
+        </p>
+        <p class="important-notes">
+            0.2 represents 200 grams, 1 represents 1 kilogram, 10 represents 10 kilogram <br> 
+        </p>
+    </section>
+    <section class="progress-container">
+        <h1 class="progress">35%</h1>
+        <progress value="35" max="100"></progress>
+    </section>
+    <section class="ingredient-container">
+        <div class="container">
+            <h2>Baking Ingredients</h2>
+            <section class="baking-section dropdown">
+                <h3> Sugar - Cost and Quantity Purchased</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="sugar-price">
+                    </li>
+                    <li>
+                        <span> Unit bought </span>
+                        <input type="number" id="sugar-unit">
+                    </li>
+                    <li>
+                        <span> Unit </span>
+                        <select name="sugar-measurement">
+                            <option value="Kg"> kilogram</option>
+                            <option value="Ounces"> Ounces</option>
+                        </select>
+                    </li>
+                </ul>
+            </section>
+            <section class="butter-section dropdown even">
+                <h3> Butter - Cost and Quantity Purchased</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="butter-price">
+                    </li>
+                    <li>
+                        <span> Unit bought </span>
+                        <input type="number" id="butter-unit">
+                    </li>
+                    <li>
+                        <span> Unit </span>
+                        <select name="sugar-measurement">
+                            <option value="Kg"> kilogram</option>
+                            <option value="Ounces"> Ounces</option>
+                        </select>
+                    </li>
+                </ul>
+            </section>
+            <section class="egg-section dropdown">
+                <h3> Egg - Number Of Eggs Purchased</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="egg-price" >
+                    </li>
+                    <li>
+                        <span> Number bought </span>
+                        <input type="number" id="egg-unit" >
+                    </li>
+                </ul>
+                <p class="important-notes">
+                    Indicate the total number of eggs bought, not number of crates but number of eggs bought.
+                </p>
+            </section>
+            <section class="flour-section dropdown even">
+                <h3> Flour - Cost and Quantity Purchased</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="flour-price" >
+                    </li>
+                    <li>
+                        <span> Unit bought </span>
+                        <input type="number" id="flour-unit" >
+                    </li>
+                    <li>
+                        <span> Unit </span>
+                        <select name="measurement">
+                            <option value="Kg"> kilogram</option>
+                            <option value="Ounces"> Ounces</option>
+                        </select>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <section class="button-section">
+            <button class="first-back">
+                Place Random Values
+            </button>
+            <button class="first-next">
+                PROCEED
+            </button>
+        </section>
+    </section>
+
+    <section class="other-ingredients-container">
+        <div class="container">
+            <h2>Butter Cream Ingredients</h2>
+            <section class="icing-sugar-section dropdown">
+                <h3> Icing Sugar - Price & Weight</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="icing-sugar-price">
+                    </li>
+                    <li>
+                        <span> Unit bought </span>
+                        <input type="number" id="icing-sugar-unit">
+                    </li>
+                    <li>
+                        <span> Unit </span>
+                        <select name="measurement">
+                            <option value="Kg"> kilogram</option>
+                            <option value="Ounces"> Ounces</option>
+                        </select>
+                    </li>
+                </ul>
+            </section>
+            <section class="butter-fbc-section dropdown even">
+                <h3> Butter - Price & Weight</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="butter-fbc-price">
+                    </li>
+                    <li>
+                        <span> Unit bought </span>
+                        <input type="number" id="butter-fbc-unit">
+                    </li>
+                    <li>
+                        <span> Unit </span>
+                        <select name="measurement">
+                            <option value="Kg"> kilogram</option>
+                            <option value="Ounces"> Ounces</option>
+                        </select>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="container">
+            <h2> Fondant Ingredients</h2>
+            <section class="icing-sugar-fondant-section dropdown">
+                <h3> Price and weights Of Icing Sugar For Fondant</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="fondant-sugar-price">
+                    </li>
+                    <li>
+                        <span> Unit bought </span>
+                        <input type="number" id="fondant-sugar-unit">
+                    </li>
+                    <li>
+                        <span> Unit </span>
+                        <select name="measurement">
+                            <option value="Kg"> kilogram</option>
+                            <option value="Ounces"> Ounces</option>
+                        </select>
+                    </li>
+                </ul>
+            </section>
+            <section class="colours-disco-section dropdown even">
+                <h3> Price and weights Of Colours & Disco</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="colours-disco-price">
+                    </li>
+                    <li>
+                        <span> Unit bought </span>
+                        <input type="number" id="colours-disco-unit">
+                    </li>
+                    <li>
+                        <span> Unit </span>
+                        <select name="measurement">
+                            <option value="Kg"> kilogram</option>
+                            <option value="Ounces"> Ounces</option>
+                        </select>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <section class="button-section">
+            <button class="second-back">
+                Place Random Values
+            </button>
+            <button class="second-next">
+                PROCEED
+            </button>
+        </section>
+    </section>
+
+
+    <section class="extra">
+    <div class="container">
+            <h2> Other Baking Ingredients</h2>
+            <section class="disco-section dropdown">
+                <h3> Disco</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="disco-price">
+                    </li>
+                </ul>
+            </section>
+            <section class="food-colour-section dropdown even">
+                <h3> Food Colours</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="food-colour-price">
+                    </li>
+                </ul>
+            </section>
+            <section class="dragees-section dropdown">
+                <h3> Dragees</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="dragees-price" >
+                    </li>
+                </ul>
+            </section>
+            <section class="other-baking-total-section dropdown">
+                <h3 class="total"> Total</h3>
+                <ul>
+                    <li>
+                        <span> Total </span>
+                        <p class="obi-total">
+                            NaN
+                        </p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="container">
+            <h2>Other Ingredients For Butter Cream</h2>
+            <section class="lustre-section dropdown">
+                <h3>Lustre</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="lustre-price">
+                    </li>
+                </ul>
+            </section>
+            <section class="butter-cream-disco-section dropdown even">
+                <h3>Disco</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="butter-cream-disco-price">
+                    </li>
+                </ul>
+            </section>
+            <section class="butter-cream-colour-section dropdown">
+                <h3>Colour</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="butter-cream-colour-price">
+                    </li>
+                </ul>
+            </section>
+            <section class="butter-cream-flavour-section dropdown even">
+                <h3>Flavour</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="butter-cream-flavour-price">
+                    </li>
+                </ul>
+            </section>
+            <section class="butter-cream-milk-section dropdown">
+                <h3>Milk</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="butter-cream-milk-price" >
+                    </li>
+                </ul>
+            </section>
+            <section class="other-butter-cream-total-section dropdown">
+                <h3 class="total"> Total</h3>
+                <ul>
+                    <li>
+                        <span> Total </span>
+                        <p class="other-butter-cream-total">
+                            Total Shows Here
+                        </p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="container">
+            <h2>Other Ingredients For Fondant</h2>
+            <section class="fondant-lustre-section dropdown">
+                <h3>Lustre</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="fondant-lustre-price">
+                    </li>
+                </ul>
+            </section>
+            <section class="fondant-disco-section dropdown even">
+                <h3>Disco</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="fondant-disco-price">
+                    </li>
+                </ul>
+            </section>
+            <section class="fondant-ethanol-section dropdown">
+                <h3>Ethanol</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="fondant-ethanol-price">
+                    </li>
+                </ul>
+            </section>
+            <section class="other-fondant-total-section dropdown">
+                <h3 class="total"> Total</h3>
+                <ul>
+                    <li>
+                        <span> Total </span>
+                        <p class="other-fondant-total">
+                            Total Shows Here
+                        </p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+
+        <section class="button-section">
+            <button class="final-back">
+                Place Random Values
+            </button>
+            <button class="final-next">
+                PROCEED
+            </button>
+        </section>
+    </section>
+
+    <section class="overhead">
+        <div class="container">
+            <h2>Number of Orders per month</h2>
+            <section class="no-of-months-section dropdown">
+                <h3> Number Of Orders Per Month</h3>
+                <ul>
+                    <li>
+                        <span> Number Of Orders </span>
+                        <input type="number" id="no-of-months">
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="container">
+            <h2>Monthly Overheads</h2>
+            <section class="rent-section dropdown">
+                <h3> Rent</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="rent-price">
+                    </li>
+                </ul>
+            </section>
+            <section class="telephone-section dropdown even">
+                <h3> Telephone bills</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="telephone-price">
+                    </li>
+                </ul>
+            </section>
+            <section class="salary-section dropdown">
+                <h3> Salaries - All staff salaries for a month</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="salary-price">
+                    </li>
+                </ul>
+            </section>
+            <section class="electricity-section dropdown even">
+                <h3> Electricity Bill</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="electricity-price">
+                    </li>
+                </ul>
+            </section>
+            <section class="waste-section dropdown">
+                <h3> Waste Disposal Bill</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="waste-price">
+                    </li>
+                </ul>
+            </section>
+            <section class="security-section dropdown even">
+                <h3> Security Bills</h3>
+                <ul>
+                    <li>
+                        <span> Price </span>
+                        <input type="number" id="security-price">
+                    </li>
+                </ul>
+            </section>
+            <section class="monthly-overdue-total-section dropdown">
+                <h3 class="total"> Total</h3>
+                <ul>
+                    <li>
+                        <span> Total </span>
+                        <p class="montly-overdue-total">
+                            NaN
+                        </p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <section class="button-section">
+            <button class="back">
+                Place Random Values
+            </button>
+            <button class="next">
+                PROCEED
+            </button>
+        </section>
+    </section>
+
+    
+    <div class="toast-body">
+        <p class="toast-text">
+            
+        </p>
+    </div>
+    <script src="js/mc.js"></script>
+</body>
+</html>

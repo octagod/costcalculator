@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024">
+    <title>Summary | Cost Calculator</title>
+    <link rel="stylesheet" href="css/cc.css">
+</head>
+<body>
+    <header>
+        <span>Costing Calculator</span>
+    </header>
+    <table class="summary-cost">
+        <h3>Summary Of Cakes Cost</h3> 
+        <tr class="table-heading">
+            <td>Summary </td> <td></td>  <td>6 inches</td> <td>7 inches</td> <td>8 inches</td> <td>9 inches</td> <td>10 inches</td> <td>11 inches</td> <td>12 inches</td> <td>13 inches</td> <td>14 inches</td> <td>15 inches</td> <td>16 inches</td> <td>17 inches</td> <td>18 inches</td>
+        </tr>
+    </table>
+    <section class="minimum">
+        <h2>Minimum Selling Price Using Percentage Or Amount</h2>
+        <h4>1. Percentage(Recommended)</h4>
+        <p>
+            Enter the percentage of profit you want to make on each of your cakes. <br>
+            The Calculator will show you the minimum price you must sell your cake to make that percentage profit.
+        </p>
+        <p class="important-notes">
+            Enter the percentage at which you want your profit at.
+            e.g 50 represents 50%, 100 represents 100%
+        </p>
+        <h4>2. Amount</h4>
+        <p>
+            Enter the absolute value of profit you want to make on each cake category. <br>
+            For instance 1000 naira on uniced cake, N500 on buter cream and N1,500 on Fondant. <br>
+            This is not recommended method of pricing because it will make your small cakes very expensive and  then 
+            allow you make a small profit from your large cakes.
+        </p>
+        <h3>Select Method</h3>
+        <form action="">
+            <input type="radio" name="method" id="percentage_radio" value="percentage" checked>
+            <label for="percentage">Percentage</label> <br> <br>
+            <input type="radio" name="method" id="amount_radio" value="amount">
+            <label for="amount">Amount</label>
+        </form>
+
+        
+        <div class="input-containers">
+            <div class="input-holders">
+                <h2 class="percent-heading">Percentage </h2>
+                <div class="input-containers percent-input-containers">
+                    <div class="container-1">
+                        <p>% For Uniced Cakes</p>
+                        <input type="number" id="percentage-uniced" >
+                    </div>
+                    <div class="container-2">
+                        <p>% For Butter Cream Cakes</p>
+                        <input type="number" id="percentage-butter" >
+                    </div>
+                    <div class="container-3">
+                        <p>% For Fondant Cakes</p>
+                        <input type="number" id="percentage-fondant" >
+                    </div>
+                    <div class="input-button-div">
+                        <button id="input-button">
+                            Generate Profit
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="input-holder-2">
+                <h2 class="amount-heading">Amount</h2>
+                <div class="input-containers amount-input-containers">
+                    <div class="container-1">
+                        <p><span>N</span> For Uniced Cakes</p>
+                        <input type="number" id="amount-uniced" >
+                    </div>
+                    <div class="container-2">
+                        <p><span>N</span> For Butter Cream Cakes</p>
+                        <input type="number" id="amount-butter" >
+                    </div>
+                    <div class="container-3">
+                        <p><span>N</span> For Fondant Cakes</p>
+                        <input type="number" id="amount-fondant" >
+                    </div>
+                    <div class="input-button-div">
+                        <button id="input-button-amount">
+                            Generate Profit
+                        </button>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <section class="percentage-section">
+        <table class="percentage-table">
+            <h3>Percentage Of Cakes Cost</h3> 
+            <tr class="table-heading">
+                <td>Name </td> <td>Percentage</td>  <td>6 inches</td> <td>7 inches</td> <td>8 inches</td> <td>9 inches</td> <td>10 inches</td> <td>11 inches</td> <td>12 inches</td> <td>13 inches</td> <td>14 inches</td> <td>15 inches</td> <td>16 inches</td> <td>17 inches</td> <td>18 inches</td>
+            </tr>
+        </table>
+        <table class="profit-table">
+            <h3>Profit Rate</h3> 
+            <tr class="table-heading">
+                <td>Name </td> <td>Percentage</td>  <td>6 inches</td> <td>7 inches</td> <td>8 inches</td> <td>9 inches</td> <td>10 inches</td> <td>11 inches</td> <td>12 inches</td> <td>13 inches</td> <td>14 inches</td> <td>15 inches</td> <td>16 inches</td> <td>17 inches</td> <td>18 inches</td>
+            </tr>
+        </table>
+    </section>
+    <section class="amount-section">
+        <table class="amount-table">
+            <h3>Amount Of Cakes Cost</h3> 
+            <tr class="table-heading">
+                <td>Name </td> <td>Amount</td>  <td>6 inches</td> <td>7 inches</td> <td>8 inches</td> <td>9 inches</td> <td>10 inches</td> <td>11 inches</td> <td>12 inches</td> <td>13 inches</td> <td>14 inches</td> <td>15 inches</td> <td>16 inches</td> <td>17 inches</td> <td>18 inches</td>
+            </tr>
+        </table>
+        <table class="amount-profit-table">
+            <h3>Profit Rate</h3> 
+            <tr class="table-heading">
+                <td>Name </td> <td>Amount</td>  <td>6 inches</td> <td>7 inches</td> <td>8 inches</td> <td>9 inches</td> <td>10 inches</td> <td>11 inches</td> <td>12 inches</td> <td>13 inches</td> <td>14 inches</td> <td>15 inches</td> <td>16 inches</td> <td>17 inches</td> <td>18 inches</td>
+            </tr>
+        </table>
+    </section>
+    <div class="print-button-contaner">
+        <button class="convert-pdf">
+            Convert To PDF
+        </button>
+    </div>
+    
+    <div class="toast-body">
+        <p class="toast-text">
+            
+        </p>
+    </div>
+    <script src="js/sm.js"></script>
+</body>
+</html>

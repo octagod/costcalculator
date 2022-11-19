@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Recipes - Costing Calculator</title>
+    <link rel="stylesheet" href="css/recipes.css">
+</head>
+<body>
+    <header>
+        <span>Costing Calculator</span>
+    </header>
+    <section class="heading" id="#heading">
+        <h2>
+            RECIPES
+        </h2>
+        <p class="sub-title">
+            Here you are required to enter all the ingredients that you use in creating your cake based on your recipe. <br>
+        </p>
+        <p class="important-notes">
+            200 represents 200 grams and 1000 represents 1 kilogram. <br> 
+            <br>
+            Kindly note that empty fields will be populated with '0'
+        </p>
+    </section>
+    <section class="progress-container">
+        <h1 class="progress">10%</h1>
+        <progress value="10" max="100"></progress>
+    </section>
+
+    <section class="ingredient-container">
+        <div class="container">
+            <h2>Indgredients</h2>
+            <section class="sugar-section dropdown">
+                <h3> Sugar <span>?</span></h3>
+                <ul>
+                    <li>
+                        <span> 6 Inches </span>
+                        <input type="number" id="6-sugar" >
+                    </li>
+                    <li>
+                        <span> 7 Inches </span>
+                        <input type="number" id="7-sugar" >
+                    </li>
+                    <li>
+                        <span> 8 Inches </span>
+                        <input type="number" id="8-sugar" >
+                    </li>
+                    <li>
+                        <span> 9 Inches </span>
+                        <input type="number" id="9-sugar" >
+                    </li>
+                    <li>
+                        <span> 10 Inches </span>
+                        <input type="number" id="10-sugar" >
+                    </li>
+                    <li>
+                        <span> 11 Inches </span>
+                        <input type="number" id="11-sugar" >
+                    </li>
+                    <li>
+                        <span> 12 Inches </span>
+                        <input type="number" id="12-sugar" >
+                    </li>
+                    <li>
+                        <span> 13 Inches </span>
+                        <input type="number" id="13-sugar" >
+                    </li>
+                    <li>
+                        <span> 14 Inches </span>
+                        <input type="number" id="14-sugar" >
+                    </li>
+                    <li>
+                        <span> 15 Inches </span>
+                        <input type="number" id="15-sugar" >
+                    </li>
+                    <li>
+                        <span> 16 Inches </span>
+                        <input type="number" id="16-sugar" >
+                    </li>
+                    <li>
+                        <span> 17 Inches </span>
+                        <input type="number" id="17-sugar" >
+                    </li>
+                    <li>
+                        <span> 18 Inches </span>
+                        <input type="number" id="18-sugar" >
+                    </li>
+                </ul>
+            </section>
+            <section class="butter-section dropdown even">
+                <h3> Butter <span>?</span></h3>
+                <ul>
+                    <li>
+                        <span> 6 Inches </span>
+                        <input type="number" id="6-butter" >
+                    </li>
+                    <li>
+                        <span> 7 Inches </span>
+                        <input type="number" id="7-butter" >
+                    </li>
+                    <li>
+                        <span> 8 Inches </span>
+                        <input type="number" id="8-butter" >
+                    </li>
+                    <li>
+                        <span> 9 Inches </span>
+                        <input type="number" id="9-butter" >
+                    </li>
+                    <li>
+                        <span> 10 Inches </span>
+                        <input type="number" id="10-butter" >
+                    </li>
+                    <li>
+                        <span> 11 Inches </span>
+                        <input type="number" id="11-butter" >
+                    </li>
+                    <li>
+                        <span> 12 Inches </span>
+                        <input type="number" id="12-butter" >
+                    </li>
+                    <li>
+                        <span> 13 Inches </span>
+                        <input type="number" id="13-butter" >
+                    </li>
+                    <li>
+                        <span> 14 Inches </span>
+                        <input type="number" id="14-butter" >
+                    </li>
+                    <li>
+                        <span> 15 Inches </span>
+                        <input type="number" id="15-butter" >
+                    </li>
+                    <li>
+                        <span> 16 Inches </span>
+                        <input type="number" id="16-butter" >
+                    </li>
+                    <li>
+                        <span> 17 Inches </span>
+                        <input type="number" id="17-butter" >
+                    </li>
+                    <li>
+                        <span> 18 Inches </span>
+                        <input type="number" id="18-butter" >
+                    </li>
+                </ul>
+            </section>
+            <section class="egg-section dropdown">
+                <h3> Eggs <span>?</span></h3>
+                <ul>
+                    <li>
+                        <span> 6 Inches </span>
+                        <input type="number" id="6-egg" >
+                    </li>
+                    <li>
+                        <span> 7 Inches </span>
+                        <input type="number" id="7-egg" >
+                    </li>
+                    <li>
+                        <span> 8 Inches </span>
+                        <input type="number" id="8-egg" >
+                    </li>
+                    <li>
+                        <span> 9 Inches </span>
+                        <input type="number" id="9-egg" >
+                    </li>
+                    <li>
+                        <span> 10 Inches </span>
+                        <input type="number" id="10-egg" >
+                    </li>
+                    <li>
+                        <span> 11 Inches </span>
+                        <input type="number" id="11-egg" >
+                    </li>
+                    <li>
+                        <span> 12 Inches </span>
+                        <input type="number" id="12-egg" >
+                    </li>
+                    <li>
+                        <span> 13 Inches </span>
+                        <input type="number" id="13-egg" >
+                    </li>
+                    <li>
+                        <span> 14 Inches </span>
+                        <input type="number" id="14-egg" >
+                    </li>
+                    <li>
+                        <span> 15 Inches </span>
+                        <input type="number" id="15-egg" >
+                    </li>
+                    <li>
+                        <span> 16 Inches </span>
+                        <input type="number" id="16-egg" >
+                    </li>
+                    <li>
+                        <span> 17 Inches </span>
+                        <input type="number" id="17-egg" >
+                    </li>
+                    <li>
+                        <span> 18 Inches </span>
+                        <input type="number" id="18-egg" >
+                    </li>
+                </ul>
+                <p class="important-notes">
+                    1 Eggs weight 50g on the average
+                </p>
+            </section>
+            <section class="flour-section dropdown even">
+                <h3> Flour <span>?</span></h3>
+                <ul>
+                    <li>
+                        <span> 6 Inches </span>
+                        <input type="number" id="6-flour" >
+                    </li>
+                    <li>
+                        <span> 7 Inches </span>
+                        <input type="number" id="7-flour" >
+                    </li>
+                    <li>
+                        <span> 8 Inches </span>
+                        <input type="number" id="8-flour" >
+                    </li>
+                    <li>
+                        <span> 9 Inches </span>
+                        <input type="number" id="9-flour" >
+                    </li>
+                    <li>
+                        <span> 10 Inches </span>
+                        <input type="number" id="10-flour" >
+                    </li>
+                    <li>
+                        <span> 11 Inches </span>
+                        <input type="number" id="11-flour" >
+                    </li>
+                    <li>
+                        <span> 12 Inches </span>
+                        <input type="number" id="12-flour" >
+                    </li>
+                    <li>
+                        <span> 13 Inches </span>
+                        <input type="number" id="13-flour" >
+                    </li>
+                    <li>
+                        <span> 14 Inches </span>
+                        <input type="number" id="14-flour" >
+                    </li>
+                    <li>
+                        <span> 15 Inches </span>
+                        <input type="number" id="15-flour" >
+                    </li>
+                    <li>
+                        <span> 16 Inches </span>
+                        <input type="number" id="16-flour" >
+                    </li>
+                    <li>
+                        <span> 17 Inches </span>
+                        <input type="number" id="17-flour" >
+                    </li>
+                    <li>
+                        <span> 18 Inches </span>
+                        <input type="number" id="18-flour" >
+                    </li>
+                </ul>
+            </section>
+            <section class="others-section dropdown">
+                <h3> Others <span>?</span></h3>
+                <ul>
+                    <li>
+                        <span> 6 Inches </span>
+                        <input type="number" id="6-others" value="200">
+                    </li>
+                    <li>
+                        <span> 7 Inches </span>
+                        <input type="number" id="7-others" value="300">
+                    </li>
+                    <li>
+                        <span> 8 Inches </span>
+                        <input type="number" id="8-others" value="400">
+                    </li>
+                    <li>
+                        <span> 9 Inches </span>
+                        <input type="number" id="9-others" value="500">
+                    </li>
+                    <li>
+                        <span> 10 Inches </span>
+                        <input type="number" id="10-others" value="650">
+                    </li>
+                    <li>
+                        <span> 11 Inches </span>
+                        <input type="number" id="11-others" value="800">
+                    </li>
+                    <li>
+                        <span> 12 Inches </span>
+                        <input type="number" id="12-others" value="1000">
+                    </li>
+                    <li>
+                        <span> 13 Inches </span>
+                        <input type="number" id="13-others" value="1300">
+                    </li>
+                    <li>
+                        <span> 14 Inches </span>
+                        <input type="number" id="14-others" value="1500">
+                    </li>
+                    <li>
+                        <span> 15 Inches </span>
+                        <input type="number" id="15-others" value="1800">
+                    </li>
+                    <li>
+                        <span> 16 Inches </span>
+                        <input type="number" id="16-others" value="2200">
+                    </li>
+                    <li>
+                        <span> 17 Inches </span>
+                        <input type="number" id="17-others" value="2500">
+                    </li>
+                    <li>
+                        <span> 18 Inches </span>
+                        <input type="number" id="18-others" value="3000">
+                    </li>
+                </ul>
+            </section>
+            <section class="overhead-section dropdown even">
+                <h3> Overhead <span>?</span></h3>
+                <ul>
+                    <li>
+                        <span> 6 Inches </span>
+                        <input type="number" id="6-overhead" value="200">
+                    </li>
+                    <li>
+                        <span> 7 Inches </span>
+                        <input type="number" id="7-overhead" value="300">
+                    </li>
+                    <li>
+                        <span> 8 Inches </span>
+                        <input type="number" id="8-overhead" value="400">
+                    </li>
+                    <li>
+                        <span> 9 Inches </span>
+                        <input type="number" id="9-overhead" value="500">
+                    </li>
+                    <li>
+                        <span> 10 Inches </span>
+                        <input type="number" id="10-overhead" value="650">
+                    </li>
+                    <li>
+                        <span> 11 Inches </span>
+                        <input type="number" id="11-overhead" value="800">
+                    </li>
+                    <li>
+                        <span> 12 Inches </span>
+                        <input type="number" id="12-overhead" value="1000">
+                    </li>
+                    <li>
+                        <span> 13 Inches </span>
+                        <input type="number" id="13-overhead" value="1300">
+                    </li>
+                    <li>
+                        <span> 14 Inches </span>
+                        <input type="number" id="14-overhead" value="1500">
+                    </li>
+                    <li>
+                        <span> 15 Inches </span>
+                        <input type="number" id="15-overhead" value="1800">
+                    </li>
+                    <li>
+                        <span> 16 Inches </span>
+                        <input type="number" id="16-overhead" value="2200">
+                    </li>
+                    <li>
+                        <span> 17 Inches </span>
+                        <input type="number" id="17-overhead" value="2500">
+                    </li>
+                    <li>
+                        <span> 18 Inches </span>
+                        <input type="number" id="18-overhead" value="3000">
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <section class="button-section">
+            <button class="first-back">
+                Back
+            </button>
+            <button class="first-next">
+                PROCEED
+            </button>
+        </section>
+    </section>
+
+
+
+
+
+
+
+    <div class="butter-cream-container">
+        <h2>Butter Cream covering guide</h2>
+        <section class="butter-cream-section dropdown">
+            <h3> Butter Cream To Cover Cake <span>?</span></h3>
+            <ul>
+                <li>
+                    <span> 6 Inches </span>
+                    <input type="number" id="6-butter-cream" value="200">
+                </li>
+                <li>
+                    <span> 7 Inches </span>
+                    <input type="number" id="7-butter-cream" value="300">
+                </li>
+                <li>
+                    <span> 8 Inches </span>
+                    <input type="number" id="8-butter-cream" value="400">
+                </li>
+                <li>
+                    <span> 9 Inches </span>
+                    <input type="number" id="9-butter-cream" value="500">
+                </li>
+                <li>
+                    <span> 10 Inches </span>
+                    <input type="number" id="10-butter-cream" value="650">
+                </li>
+                <li>
+                    <span> 11 Inches </span>
+                    <input type="number" id="11-butter-cream" value="800">
+                </li>
+                <li>
+                    <span> 12 Inches </span>
+                    <input type="number" id="12-butter-cream" value="1000">
+                </li>
+                <li>
+                    <span> 13 Inches </span>
+                    <input type="number" id="13-butter-cream" value="1300">
+                </li>
+                <li>
+                    <span> 14 Inches </span>
+                    <input type="number" id="14-butter-cream" value="1500">
+                </li>
+                <li>
+                    <span> 15 Inches </span>
+                    <input type="number" id="15-butter-cream" value="1800">
+                </li>
+                <li>
+                    <span> 16 Inches </span>
+                    <input type="number" id="16-butter-cream" value="2200">
+                </li>
+                <li>
+                    <span> 17 Inches </span>
+                    <input type="number" id="17-butter-cream" value="2800">
+                </li>
+                <li>
+                    <span> 18 Inches </span>
+                    <input type="number" id="18-butter-cream" value="3200">
+                </li>
+            </ul>
+        </section>
+        <section class="butter-cream-others-section dropdown even">
+            <h3> Others <span>?</span></h3>
+            <ul>
+                <li>
+                    <span> 6 Inches </span>
+                    <input type="number" id="6-butter-cream-others" value="200">
+                </li>
+                <li>
+                    <span> 7 Inches </span>
+                    <input type="number" id="7-butter-cream-others" value="300">
+                </li>
+                <li>
+                    <span> 8 Inches </span>
+                    <input type="number" id="8-butter-cream-others" value="400">
+                </li>
+                <li>
+                    <span> 9 Inches </span>
+                    <input type="number" id="9-butter-cream-others" value="500">
+                </li>
+                <li>
+                    <span> 10 Inches </span>
+                    <input type="number" id="10-butter-cream-others" value="650">
+                </li>
+                <li>
+                    <span> 11 Inches </span>
+                    <input type="number" id="11-butter-cream-others" value="800">
+                </li>
+                <li>
+                    <span> 12 Inches </span>
+                    <input type="number" id="12-butter-cream-others" value="1000">
+                </li>
+                <li>
+                    <span> 13 Inches </span>
+                    <input type="number" id="13-butter-cream-others" value="1300">
+                </li>
+                <li>
+                    <span> 14 Inches </span>
+                    <input type="number" id="14-butter-cream-others" value="1500">
+                </li>
+                <li>
+                    <span> 15 Inches </span>
+                    <input type="number" id="15-butter-cream-others" value="1800">
+                </li>
+                <li>
+                    <span> 16 Inches </span>
+                    <input type="number" id="16-butter-cream-others" value="2200">
+                </li>
+                <li>
+                    <span> 17 Inches </span>
+                    <input type="number" id="17-butter-cream-others" value="2800">
+                </li>
+                <li>
+                    <span> 18 Inches </span>
+                    <input type="number" id="18-butter-cream-others" value="3200">
+                </li>
+            </ul>
+        </section>
+    </div>
+    <div class="fondant-container">
+        <h2>Fondant Covering Quantity</h2>
+        <section class="fondant-section dropdown">
+            <h3> Fondant Covering Cake <span>?</span></h3>
+            <ul>
+                <li>
+                    <span> 6 Inches </span>
+                    <input type="number" id="6-fondant" value="750">
+                </li>
+                <li>
+                    <span> 7 Inches </span>
+                    <input type="number" id="7-fondant" value="900">
+                </li>
+                <li>
+                    <span> 8 Inches </span>
+                    <input type="number" id="8-fondant" value="1000">
+                </li>
+                <li>
+                    <span> 9 Inches </span>
+                    <input type="number" id="9-fondant" value="1300">
+                </li>
+                <li>
+                    <span> 10 Inches </span>
+                    <input type="number" id="10-fondant" value="1500">
+                </li>
+                <li>
+                    <span> 11 Inches </span>
+                    <input type="number" id="11-fondant" value="1800">
+                </li>
+                <li>
+                    <span> 12 Inches </span>
+                    <input type="number" id="12-fondant" value="2000">
+                </li>
+                <li>
+                    <span> 13 Inches </span>
+                    <input type="number" id="13-fondant" value="2300">
+                </li>
+                <li>
+                    <span> 14 Inches </span>
+                    <input type="number" id="14-fondant" value="2800">
+                </li>
+                <li>
+                    <span> 15 Inches </span>
+                    <input type="number" id="15-fondant" value="3000">
+                </li>
+                <li>
+                    <span> 16 Inches </span>
+                    <input type="number" id="16-fondant" value="3200">
+                </li>
+                <li>
+                    <span> 17 Inches </span>
+                    <input type="number" id="17-fondant" value="4000">
+                </li>
+                <li>
+                    <span> 18 Inches </span>
+                    <input type="number" id="18-fondant" value="4500">
+                </li>
+            </ul>
+        </section>
+    </div>
+    <section class="packaging-container">
+        <div class="container">
+            <h2>Cost Of Cake Boards & Boxes</h2>
+            <section class="board-section dropdown">
+                <h3>Cake Boards <span>?</span></h3>
+                <ul>
+                    <li>
+                        <span> 6 Inches </span>
+                        <input type="number" id="6-board" >
+                    </li>
+                    <li>
+                        <span> 7 Inches </span>
+                        <input type="number" id="7-board" >
+                    </li>
+                    <li>
+                        <span> 8 Inches </span>
+                        <input type="number" id="8-board" >
+                    </li>
+                    <li>
+                        <span> 9 Inches </span>
+                        <input type="number" id="9-board" >
+                    </li>
+                    <li>
+                        <span> 10 Inches </span>
+                        <input type="number" id="10-board" >
+                    </li>
+                    <li>
+                        <span> 11 Inches </span>
+                        <input type="number" id="11-board" >
+                    </li>
+                    <li>
+                        <span> 12 Inches </span>
+                        <input type="number" id="12-board" >
+                    </li>
+                    <li>
+                        <span> 13 Inches </span>
+                        <input type="number" id="13-board" >
+                    </li>
+                    <li>
+                        <span> 14 Inches </span>
+                        <input type="number" id="14-board" >
+                    </li>
+                    <li>
+                        <span> 15 Inches </span>
+                        <input type="number" id="15-board" >
+                    </li>
+                    <li>
+                        <span> 16 Inches </span>
+                        <input type="number" id="16-board" >
+                    </li>
+                    <li>
+                        <span> 17 Inches </span>
+                        <input type="number" id="17-board" >
+                    </li>
+                    <li>
+                        <span> 18 Inches </span>
+                        <input type="number" id="18-board" >
+                    </li>
+                </ul>
+            </section>
+            <section class="box-section dropdown even">
+                <h3>Cake Boxes <span>?</span></h3>
+                <ul>
+                    <li>
+                        <span> 6 Inches </span>
+                        <input type="number" id="6-box" >
+                    </li>
+                    <li>
+                        <span> 7 Inches </span>
+                        <input type="number" id="7-box" >
+                    </li>
+                    <li>
+                        <span> 8 Inches </span>
+                        <input type="number" id="8-box" >
+                    </li>
+                    <li>
+                        <span> 9 Inches </span>
+                        <input type="number" id="9-box" >
+                    </li>
+                    <li>
+                        <span> 10 Inches </span>
+                        <input type="number" id="10-box" >
+                    </li>
+                    <li>
+                        <span> 11 Inches </span>
+                        <input type="number" id="11-box" >
+                    </li>
+                    <li>
+                        <span> 12 Inches </span>
+                        <input type="number" id="12-box" >
+                    </li>
+                    <li>
+                        <span> 13 Inches </span>
+                        <input type="number" id="13-box" >
+                    </li>
+                    <li>
+                        <span> 14 Inches </span>
+                        <input type="number" id="14-box" >
+                    </li>
+                    <li>
+                        <span> 15 Inches </span>
+                        <input type="number" id="15-box" >
+                    </li>
+                    <li>
+                        <span> 16 Inches </span>
+                        <input type="number" id="16-box" >
+                    </li>
+                    <li>
+                        <span> 17 Inches </span>
+                        <input type="number" id="17-box" >
+                    </li>
+                    <li>
+                        <span> 18 Inches </span>
+                        <input type="number" id="18-box" >
+                    </li>
+                </ul>
+            </section>
+            <section class="label-section dropdown">
+                <h3>Labels & Stickers <span>?</span></h3>
+                <ul>
+                    <li>
+                        <span> 6 Inches </span>
+                        <input type="number" id="6-label" >
+                    </li>
+                    <li>
+                        <span> 7 Inches </span>
+                        <input type="number" id="7-label" >
+                    </li>
+                    <li>
+                        <span> 8 Inches </span>
+                        <input type="number" id="8-label" >
+                    </li>
+                    <li>
+                        <span> 9 Inches </span>
+                        <input type="number" id="9-label" >
+                    </li>
+                    <li>
+                        <span> 10 Inches </span>
+                        <input type="number" id="10-label" >
+                    </li>
+                    <li>
+                        <span> 11 Inches </span>
+                        <input type="number" id="11-label" >
+                    </li>
+                    <li>
+                        <span> 12 Inches </span>
+                        <input type="number" id="12-label" >
+                    </li>
+                    <li>
+                        <span> 13 Inches </span>
+                        <input type="number" id="13-label" >
+                    </li>
+                    <li>
+                        <span> 14 Inches </span>
+                        <input type="number" id="14-label" >
+                    </li>
+                    <li>
+                        <span> 15 Inches </span>
+                        <input type="number" id="15-label" >
+                    </li>
+                    <li>
+                        <span> 16 Inches </span>
+                        <input type="number" id="16-label" >
+                    </li>
+                    <li>
+                        <span> 17 Inches </span>
+                        <input type="number" id="17-label" >
+                    </li>
+                    <li>
+                        <span> 18 Inches </span>
+                        <input type="number" id="18-label" >
+                    </li>
+                </ul>
+            </section>
+            <section class="wrapper-section dropdown even">
+                <h3>Wrappers & Packaging <span>?</span></h3>
+                <ul>
+                    <li>
+                        <span> 6 Inches </span>
+                        <input type="number" id="6-wrapper" >
+                    </li>
+                    <li>
+                        <span> 7 Inches </span>
+                        <input type="number" id="7-wrapper" >
+                    </li>
+                    <li>
+                        <span> 8 Inches </span>
+                        <input type="number" id="8-wrapper" >
+                    </li>
+                    <li>
+                        <span> 9 Inches </span>
+                        <input type="number" id="9-wrapper" >
+                    </li>
+                    <li>
+                        <span> 10 Inches </span>
+                        <input type="number" id="10-wrapper" >
+                    </li>
+                    <li>
+                        <span> 11 Inches </span>
+                        <input type="number" id="11-wrapper" >
+                    </li>
+                    <li>
+                        <span> 12 Inches </span>
+                        <input type="number" id="12-wrapper" >
+                    </li>
+                    <li>
+                        <span> 13 Inches </span>
+                        <input type="number" id="13-wrapper" >
+                    </li>
+                    <li>
+                        <span> 14 Inches </span>
+                        <input type="number" id="14-wrapper" >
+                    </li>
+                    <li>
+                        <span> 15 Inches </span>
+                        <input type="number" id="15-wrapper" >
+                    </li>
+                    <li>
+                        <span> 16 Inches </span>
+                        <input type="number" id="16-wrapper" >
+                    </li>
+                    <li>
+                        <span> 17 Inches </span>
+                        <input type="number" id="17-wrapper" >
+                    </li>
+                    <li>
+                        <span> 18 Inches </span>
+                        <input type="number" id="18-wrapper" >
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <section class="button-section">
+            <button class="back">
+                BACK
+            </button>
+            <button class="next">
+                PROCEED
+            </button>
+        </section>
+    </section>
+
+
+    <div class="toast-body">
+        <p class="toast-text">
+            
+        </p>
+    </div>
+    <script src="js/recipes.js"></script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+:root{
+    --primary: #5b9797;
+}
+
+body{
+   background-color: rgb(233, 233, 233);
+   padding: 0;
+   margin: 0; 
+   font-family: 'Alata', sans-serif;
+   position: relative;
+}
+h1, h2, h3{
+    font-family: 'Orbitron', sans-serif;
+    word-spacing: 2px;
+    line-height: 20px;
+}
+*:focus{
+    outline: none;
+}
+section.button-section button.back:hover{
+    background-color: rgb(182, 8, 8);
+}
+section.button-section button.next:hover{
+    background-color: rgb(73, 189, 98);
+}
+div.toast-body{
+    position: fixed;
+    background-color: red;
+    top: 80px;
+    left: 0;
+    border-left: 5px white solid;
+    border-radius: 0;
+    padding: 1%;
+    margin: 0;
+    z-index: 3;
+    visibility: hidden;
+    opacity: 0;
+    transition: ease .5s;
+}
+div.show-toast{
+    visibility: visible;
+    opacity: 1;
+}
+div.toast-body p.toast-text{
+    color: white;
+}
+
+/**
+hide the constant sections
+**/
+.others-section, .overhead-section, 
+.butter-cream-container, .fondant-container, .packaging-container{
+    display: none;
+}
+h3 span{
+    display: inline-block;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: rgb(180, 180, 180);
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.progress-container{
+    position: relative;
+}
+@-webkit-keyframes stripes{
+    100% {background-position:  -100px 0px;}
+}
+@keyframes stripes{
+    100% {background-position:  -100px 0px;}
+}
+progress[value]{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 94%;
+    height: 30px;
+    margin: 2% 3%;
+    border-radius: 1px;
+    /* color: var(--primary);
+    background-color: rgb(218, 218, 218); */
+}
+progress[value]::-webkit-progress-bar{
+    background-color: rgb(206, 206, 206);
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgb(153, 153, 153) inset;
+}
+progress[value]::-webkit-progress-value{
+    background-image: 
+        -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, 0.116) 33%,
+        rgba(0, 0, 0, 0.116) 66%, transparent 66%),
+         -webkit-linear-gradient(top,
+        rgba(255,255,255, .25), 
+        rgba(0,0,0, .25)),
+        -webkit-linear-gradient(left, #5b9797, #b0e6e6);
+    border-radius: 4px;
+    background-size: 65px 35px, 100% 100%, 100% 100%;
+    -webkit-animation: stripe 5s linear infinite;
+    animation: stripe 5s linear infinite;
+}
+h1.progress{
+    position: absolute;
+    /* z-index: 2; */
+    top: 19%;
+    left: 5px;
+    margin-left: 3%;
+    color: rgb(255, 255, 255);
+    /* size: 60px; */
+}
+
+@media screen and (max-width: 800px){
+    header{
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        left: 0;
+        background: var(--primary);
+        padding: 3%;
+        color: white;
+        box-shadow: 0 0 5px rgb(73, 73, 73);
+        font-size: 20px;
+        font-family: 'Orbitron', sans-serif;
+        z-index: 2;
+    }
+
+    div, section.heading{
+        margin: 3%;
+        box-shadow: 0 0 5px grey;
+        background: white;
+        padding: 3%;
+        border-radius: 5px;
+    }
+    p.important-notes{
+        border-left: 3px solid #5b9797;
+        background-color: rgb(238, 238, 238);
+        color: #437070;
+        padding: 1%;
+        font-size: 11px;
+    }
+    section.dropdown h3{
+        background-color: var(--primary);
+        padding: 2%;
+        border-radius: 2px;
+        color: white;
+        /* border-right: 10px solid rgb(202, 202, 202); */
+    }
+    section.dropdown ul{
+        transition: ease .5s;
+        display: none;
+
+    }
+    section.dropdown ul.show{
+        transition: ease .5s;
+        display: block;
+    }
+    section.dropdown ul li{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    section.dropdown ul li input{
+        border: solid 2px var(--primary);
+        padding: 3px;
+        max-width: 60%;
+    }
+    section.button-section{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        margin: 3%;
+        padding: 1%;
+        /* justify-items: right; */
+    }
+    section.button-section button.back{
+        grid-column: 1/7;
+        text-align: center;
+        background-color: rgb(141, 1, 1);
+        height: 30px;
+        width: 60%;
+        padding: 1%;
+        border: none;
+        color: white;
+        font-size: 12px;
+        border-radius: 2px;
+        box-shadow: 0 0 5px grey;
+    }
+    section.button-section button.next{
+        justify-self: end;
+        grid-column: 7/13;
+        text-align: center;
+        background-color: rgb(17, 141, 1);
+        height: 30px;
+        width: 60%;
+        padding: 1%;
+        border: none;
+        color: white;
+        font-size: 12px;
+        border-radius: 2px;
+        box-shadow: 0 0 5px grey;
+    }
+
+}
+@media screen and (min-width: 801px){
+    header{
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        left: 0;
+        background: var(--primary);
+        padding: 1%;
+        color: white;
+        box-shadow: 0 0 5px rgb(73, 73, 73);
+        font-size: 27px;
+        font-family: 'Orbitron', sans-serif;
+        z-index: 2;
+    }
+    div, section.heading{
+        margin: 3%;
+        box-shadow: 0 0 5px grey;
+        background: white;
+        padding: 3%;
+        border-radius: 5px;
+    }
+    p.important-notes{
+        border-left: 3px solid rgb(0, 124, 124);
+        background-color: rgb(238, 238, 238);
+        color: rgb(3, 71, 71);
+        padding: 1%;
+        font-size: 11px;
+    }
+    section.dropdown h3{
+        background-color: var(--primary);
+        padding: 10px;
+        border-radius: 2px;
+        color: white;
+        cursor: pointer;
+        /* border-right: 10px solid rgb(202, 202, 202); */
+    }
+    section.dropdown ul{
+        transition: ease .5s;
+        display: grid;
+        grid-template-columns: repeat(20,1fr);
+        padding: 2px;
+    }
+    section.dropdown ul li{
+        width: 80px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        /* gap: 10px; */
+        margin-bottom: 20px;
+        padding-right: 2px;
+        /* text-align: center; */
+    }
+    section.dropdown ul li input{
+        border: solid 2px var(--primary);
+        padding: 3px;
+        max-width: 50%;
+        height: 30px;
+    }
+    section.dropdown ul li span{
+       display: inline-block;
+       padding-left: 10px;
+       margin-bottom: 10px;
+       font-size: 13px;
+    }
+    div.container{
+        display: grid;
+        grid-template-columns: repeat(11, 6fr);
+    }
+    div.container h2{
+        grid-column: 1/12;
+    }
+    div.container section{
+        grid-column: 1/12;
+    }
+    div.container section.even{
+        grid-column: 1/12;
+    }
+    section.button-section{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        margin: 3%;
+        padding: 1%;
+        /* justify-items: right; */
+    }
+    section.button-section button.back, section.button-section button.first-back{
+        grid-column: 1/7;
+        text-align: center;
+        background-color: rgb(141, 1, 1);
+        height: 30px;
+        width: 60%;
+        padding: 1%;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 2px;
+        box-shadow: 0 0 5px grey;
+    }
+    section.button-section button.next, section.button-section button.first-next{
+        justify-self: end;
+        grid-column: 7/13;
+        text-align: center;
+        background-color: rgb(17, 141, 1);
+        height: 30px;
+        width: 60%;
+        padding: 1%;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 2px;
+        box-shadow: 0 0 5px grey;
+    }
+}
